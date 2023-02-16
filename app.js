@@ -10,6 +10,7 @@ const app = express();
 
 app.use(express.json());
 
+mongoose.set('strictQuery', true);
 mongoose
     .connect(
         'mongodb+srv://Thomas:Thomas@backend-evaluation.jnypsxq.mongodb.net/?retryWrites=true&w=majority',

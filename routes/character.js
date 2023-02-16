@@ -5,11 +5,9 @@ const characterController = require('../controllers/Character');
 
 router.post('/', auth, characterController.createCharacter);
 
-router.post('/blizzard', characterController.blizzardCreateCharacter)
-
 router.get('/:pseudo/:class', characterController.getCharacter);
 
-router.get('/:id', characterController.getCharacters);
+router.get('/:id', characterController.getCharacterById);
 
 router.put('/:id', auth, characterController.updateCharacter);
 
